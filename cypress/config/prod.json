@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://petstore.swagger.io/v2",
+    "env": {
+        "global_timeout": 30000,
+        "environment": "PROD"
+    }
+}

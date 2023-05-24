@@ -1,0 +1,37 @@
+{
+  "name": "acompanhamento_cypressbackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open:prod": "cypress open --env configFile=prod",
+    "cy:open:dev": "cypress open --env configFile=dev",
+    "cy:run:prod": "cypress run --env configFile=prod",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "combine-reports": "mochawesome-merge --reportDir cypress/reports/mocha > cypress/reports/mochareports/report.json",
+    "generate-reports": "marge cypress/reports/mochareports/report.json -f report cypress/reports/mocha",
+    "reporter": "npm run cy:run:prod && npm run combine-reports && npm run generate-reports"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabriielSRodrigues/acompanhamento_cypressbackend.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabriielSRodrigues/acompanhamento_cypressbackend/issues"
+  },
+  "homepage": "https://github.com/GabriielSRodrigues/acompanhamento_cypressbackend#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.1",
+    "cypress": "^12.12.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}
